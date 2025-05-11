@@ -1,17 +1,629 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>lsse-visionary-hub</title>
-    <meta name="description" content="Lovable Generated Project" />
-    <meta name="author" content="Lovable" />
-    <meta property="og:image" content="/og-image.png" />
-  </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laxmi Security Systems & Electricals | Security Solutions in Visakhapatnam</title>
+    
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+    <style>
+        /* Base Styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            width: 85%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        /* Header */
+        header {
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: #d4af37; /* Gold color */
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 30px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: #d4af37;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #1a2a6c, #b21f1f); /* Dark blue to red */
+            color: white;
+            padding: 150px 0 100px;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        
+        .hero p {
+            font-size: 20px;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: #fff;
+            color: #1a2a6c;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .btn-secondary {
+            background-color: transparent;
+            color: white;
+            border: 2px solid white;
+            margin-left: 15px;
+        }
+        
+        .btn-secondary:hover {
+            background-color: white;
+            color: #1a2a6c;
+        }
+        
+        /* Services Section */
+        .services {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-title h2 {
+            font-size: 36px;
+            color: #1a2a6c;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .service-card {
+            background: #fff;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+            border-top: 4px solid #d4af37;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .service-icon {
+            font-size: 40px;
+            color: #d4af37;
+            margin-bottom: 20px;
+        }
+        
+        /* Portfolio/Products Section */
+        .portfolio {
+            background-color: #f8fafc;
+            padding: 80px 0;
+        }
+        
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        
+        .portfolio-item {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+        
+        .portfolio-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .portfolio-image {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .portfolio-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        
+        .portfolio-item:hover .portfolio-image img {
+            transform: scale(1.1);
+        }
+        
+        .portfolio-content {
+            padding: 20px;
+        }
+        
+        .portfolio-content h3 {
+            margin-top: 0;
+            color: #1a2a6c;
+        }
+        
+        /* About Section */
+        .about {
+            padding: 80px 0;
+        }
+        
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+        
+        .about-text {
+            flex: 1;
+        }
+        
+        .about-image {
+            flex: 1;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        /* Contact Section */
+        .contact {
+            background-color: #f8fafc;
+            padding: 80px 0;
+        }
+        
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 50px;
+        }
+        
+        .contact-info h3 {
+            color: #1a2a6c;
+            margin-top: 0;
+        }
+        
+        .contact-info p {
+            margin-bottom: 20px;
+        }
+        
+        .social-links {
+            margin-top: 30px;
+        }
+        
+        .social-links a {
+            display: inline-block;
+            margin-right: 15px;
+            font-size: 20px;
+            color: #1a2a6c;
+            transition: color 0.3s;
+        }
+        
+        .social-links a:hover {
+            color: #d4af37;
+        }
+        
+        .contact-form input,
+        .contact-form textarea,
+        .contact-form select {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: inherit;
+        }
+        
+        .contact-form textarea {
+            height: 150px;
+            resize: vertical;
+        }
+        
+        .contact-form button {
+            background-color: #1a2a6c;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+        
+        .contact-form button:hover {
+            background-color: #d4af37;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #1a2a6c;
+            color: #fff;
+            padding: 50px 0 20px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-column h3 {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: #d4af37;
+        }
+        
+        .footer-column ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-column ul li a {
+            color: #e2e8f0;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-column ul li a:hover {
+            color: #d4af37;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #334155;
+            color: #94a3b8;
+        }
+        
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            nav ul {
+                margin-top: 15px;
+                justify-content: center;
+            }
+            
+            nav ul li {
+                margin: 0 10px;
+            }
+            
+            .hero h1 {
+                font-size: 36px;
+            }
+            
+            .hero p {
+                font-size: 18px;
+            }
+            
+            .about-content {
+                flex-direction: column;
+            }
+            
+            .btn-secondary {
+                margin-left: 0;
+                margin-top: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <div class="logo">Laxmi Security Systems & Electricals</div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Products</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-  <body>
-    <div id="root"></div>
-    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+    <section class="hero" id="home">
+        <div class="container">
+            <h1>Your Trusted Security Partner in Visakhapatnam</h1>
+            <p>Professional security systems and electrical solutions for homes and businesses with 24/7 support and maintenance.</p>
+            <a href="#contact" class="btn">Get a Free Quote</a>
+            <a href="tel:+919885651904" class="btn btn-secondary">Call Now: +91 9885651904</a>
+        </div>
+    </section>
+
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Services</h2>
+                <p>Comprehensive security and electrical solutions tailored to your needs</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🛡️</div>
+                    <h3>Security System Installation</h3>
+                    <p>Professional installation of CCTV cameras, alarm systems, and access control by certified technicians.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🔧</div>
+                    <h3>Maintenance & Support</h3>
+                    <p>Regular maintenance and 24/7 technical support to ensure your systems are always operational.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🏠</div>
+                    <h3>Home Automation</h3>
+                    <p>Smart home solutions including lighting control, security integration, and voice control systems.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">⚡</div>
+                    <h3>Electrical Solutions</h3>
+                    <p>Complete electrical services including wiring, panels, and energy-efficient solutions.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🔍</div>
+                    <h3>Security Audits</h3>
+                    <p>Comprehensive evaluation of your current security setup with recommendations for improvement.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">📱</div>
+                    <h3>Remote Monitoring</h3>
+                    <p>Mobile access and remote monitoring capabilities for your security systems from anywhere.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Products</h2>
+                <p>High-quality security and electrical products for every need</p>
+            </div>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1585771724684-38269d6639fd?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Surveillance Systems">
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Surveillance Systems</h3>
+                        <p>Complete CCTV solutions including HD cameras, DVR/NVR systems, night vision, and motion detection technology.</p>
+                        <a href="#contact" class="btn" style="display: inline-block; margin-top: 15px; background-color: #1a2a6c; color: white;">Inquire Now</a>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1558449028-b53a39d100fc?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Networking Solutions">
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Networking Solutions</h3>
+                        <p>Enterprise-grade networking equipment including routers, switches, access points, and structured cabling.</p>
+                        <a href="#contact" class="btn" style="display: inline-block; margin-top: 15px; background-color: #1a2a6c; color: white;">Inquire Now</a>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1601376247454-6946f979e1b3?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Alarm Systems">
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Alarm Systems</h3>
+                        <p>Intrusion detection systems with door/window sensors, motion detectors, and 24/7 monitoring options.</p>
+                        <a href="#contact" class="btn" style="display: inline-block; margin-top: 15px; background-color: #1a2a6c; color: white;">Inquire Now</a>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1558002038-1055907df827?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Home Automation">
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Home Automation</h3>
+                        <p>Smart home solutions including lighting control, thermostat automation, voice control integration, and more.</p>
+                        <a href="#contact" class="btn" style="display: inline-block; margin-top: 15px; background-color: #1a2a6c; color: white;">Inquire Now</a>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1563770660941-10a63607739e?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Access Control">
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Access Control Systems</h3>
+                        <p>Keyless entry systems, biometric scanners, and card-based access solutions for enhanced security.</p>
+                        <a href="#contact" class="btn" style="display: inline-block; margin-top: 15px; background-color: #1a2a6c; color: white;">Inquire Now</a>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1605152276897-4f618f831968?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Electrical Systems">
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Electrical Systems</h3>
+                        <p>Complete electrical solutions including wiring, panels, switches, and energy-efficient installations.</p>
+                        <a href="#contact" class="btn" style="display: inline-block; margin-top: 15px; background-color: #1a2a6c; color: white;">Inquire Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>About Laxmi Security Systems & Electricals</h2>
+                    <p>Established in Visakhapatnam, Laxmi Security Systems & Electricals has been providing top-quality security and electrical solutions to residential and commercial clients for over a decade.</p>
+                    <p>Our team of certified professionals is committed to delivering reliable, cutting-edge systems backed by exceptional customer service. We understand that every property has unique security needs, which is why we offer customized solutions tailored to your specific requirements.</p>
+                    <p>From small home installations to large commercial deployments, we bring the same level of dedication and expertise to every project, ensuring your complete satisfaction.</p>
+                    <a href="#contact" class="btn" style="background-color: #1a2a6c; color: white;">Contact Us</a>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Laxmi Security Team">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contact Us</h2>
+                <p>Get in touch for a free consultation or quote</p>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <p><strong>Address:</strong> # 8-11-25, First Floor, Jogavanipalem, Beside Bajaj Show room, Old Gajuwaka, Visakhapatnam</p>
+                    <p><strong>Phone:</strong> +91 9885651904, +91 9642491920</p>
+                    <p><strong>Email:</strong> laxmicctvelectricals@gmail.com</p>
+                    <p><strong>Hours:</strong> Monday-Saturday: 9am-7pm</p>
+                    <p>Emergency support available 24/7 for existing clients</p>
+                    
+                    <div class="social-links">
+                        <h3>Follow Us</h3>
+                        <a href="https://www.instagram.com/laxmi_secure.syms/" target="_blank">📷 Instagram</a>
+                        <a href="https://twitter.com/LSE_Laxmi" target="_blank">🐦 Twitter</a>
+                        <a href="https://www.facebook.com/Laxmi-security-systams-Electricals-103886415111751" target="_blank">👍 Facebook</a>
+                    </div>
+                    
+                    <div style="margin-top: 30px;">
+                        <a href="https://g.co/kgs/1G5VpL" class="btn" target="_blank" style="background-color: #1a2a6c; color: white; display: inline-block;">Visit Us Virtually</a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form>
+                        <input type="text" placeholder="Your Name" required>
+                        <input type="email" placeholder="Your Email" required>
+                        <input type="tel" placeholder="Your Phone">
+                        <select>
+                            <option value="">Select Product/Service</option>
+                            <option value="surveillance">Surveillance Systems</option>
+                            <option value="networking">Networking Solutions</option>
+                            <option value="alarms">Alarm Systems</option>
+                            <option value="automation">Home Automation</option>
+                            <option value="Smart Networking">Networking Services</option>
+                            <option value="other">Other Inquiry</option>
+                        </select>
+                        <textarea placeholder="Your Message" required></textarea>
+                        <button type="submit">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Laxmi Security Systems & Electricals</h3>
+                    <p>Your trusted security partner in Visakhapatnam since 2010.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Products</h3>
+                    <ul>
+                        <li><a href="#portfolio">Surveillance Systems</a></li>
+                        <li><a href="#portfolio">Alarm Systems</a></li>
+                        <li><a href="#portfolio">Home Automation</a></li>
+                        <li><a href="#portfolio"> Solutions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="#services">Installation</a></li>
+                        <li><a href="#services">Maintenance</a></li>
+                        <li><a href="#services">Security Audits</a></li>
+                        <li><a href="#services">Remote Monitoring</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact</h3>
+                    <ul>
+                        <li># 8-11-25, First Floor</li>
+                        <li>Jogavanipalem, Old Gajuwaka</li>
+                        <li>Visakhapatnam</li>
+                        <li>+91 9885651904</li>
+                        <li>+91 9642491920</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Laxmi Security Systems & Electricals. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
 </html>
