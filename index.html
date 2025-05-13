@@ -1,4 +1,535 @@
-                        <h3 class="text-2xl font-semibold text-primary mb-6">Contact Information</h3>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laxmi Security Systems & Electricals | Premium Security & Electrical Solutions</title>
+    <meta name="description" content="Professional security systems and electrical solutions in Visakhapatnam. CCTV installation, home automation, alarm systems, and electrical services with 24/7 support.">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1E3A8A',
+                        secondary: '#EA580C',
+                        accent: '#F59E0B',
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 1s ease-in-out',
+                        'float': 'float 3s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(30,58,138,0.9) 0%, rgba(234,88,12,0.8) 100%);
+        }
+        .service-card:hover .service-icon {
+            transform: rotateY(180deg);
+        }
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .chat-bubble {
+            animation: float 3s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-gray-800">
+    <!-- WhatsApp Chat Button -->
+    <div class="fixed bottom-6 right-6 z-50">
+        <a href="https://wa.me/919885651904" class="block bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition-all duration-300 chat-bubble">
+            <i class="fab fa-whatsapp text-2xl"></i>
+        </a>
+    </div>
+
+    <!-- Header -->
+    <header class="sticky top-0 z-40 bg-white shadow-md">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="https://via.placeholder.com/50x50?text=LS" alt="Laxmi Security Logo" class="h-10 w-10 mr-3">
+                <a href="#" class="text-xl font-bold text-primary">Laxmi Security <span class="text-secondary">& Electricals</span></a>
+            </div>
+            
+            <nav class="hidden md:block">
+                <ul class="flex space-x-8">
+                    <li><a href="#home" class="font-medium hover:text-secondary transition">Home</a></li>
+                    <li><a href="#services" class="font-medium hover:text-secondary transition">Services</a></li>
+                    <li><a href="#products" class="font-medium hover:text-secondary transition">Products</a></li>
+                    <li><a href="#about" class="font-medium hover:text-secondary transition">About</a></li>
+                    <li><a href="#testimonials" class="font-medium hover:text-secondary transition">Testimonials</a></li>
+                    <li><a href="#contact" class="font-medium hover:text-secondary transition">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <div class="md:hidden">
+                <button id="menu-toggle" class="text-primary focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white py-4 px-4 shadow-lg">
+            <ul class="space-y-3">
+                <li><a href="#home" class="block font-medium hover:text-secondary transition">Home</a></li>
+                <li><a href="#services" class="block font-medium hover:text-secondary transition">Services</a></li>
+                <li><a href="#products" class="block font-medium hover:text-secondary transition">Products</a></li>
+                <li><a href="#about" class="block font-medium hover:text-secondary transition">About</a></li>
+                <li><a href="#testimonials" class="block font-medium hover:text-secondary transition">Testimonials</a></li>
+                <li><a href="#contact" class="block font-medium hover:text-secondary transition">Contact</a></li>
+                <li>
+                    <a href="tel:+919885651904" class="block mt-4 bg-secondary text-white py-2 px-4 rounded-full text-center font-semibold hover:bg-orange-700 transition">
+                        <i class="fas fa-phone-alt mr-2"></i> Call Now
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-gradient text-white py-20 md:py-32 relative overflow-hidden">
+        <div class="absolute inset-0 bg-black opacity-30"></div>
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="max-w-3xl mx-auto text-center" data-aos="fade-up">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">Your Trusted Security Partner in Visakhapatnam</h1>
+                <p class="text-xl md:text-2xl mb-8">Professional security systems and electrical solutions for homes and businesses with 24/7 support and maintenance.</p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="#contact" class="bg-white text-primary font-semibold py-3 px-8 rounded-full hover:bg-gray-100 transition duration-300 shadow-lg">
+                        Get a Free Quote
+                    </a>
+                    <a href="tel:+919885651904" class="bg-transparent border-2 border-white text-white font-semibold py-3 px-8 rounded-full hover:bg-white hover:text-primary transition duration-300">
+                        <i class="fas fa-phone-alt mr-2"></i> +91 9885651904
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="absolute bottom-0 left-0 right-0 h-20 bg-white transform skew-y-2 -mb-10 z-0"></div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md text-center" data-aos="fade-up">
+                    <div class="text-4xl text-secondary mb-4">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Premium Security Solutions</h3>
+                    <p class="text-gray-600">Cutting-edge security systems tailored to protect your property 24/7.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-4xl text-secondary mb-4">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Expert Electrical Services</h3>
+                    <p class="text-gray-600">Professional electrical installations and maintenance by certified experts.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-4xl text-secondary mb-4">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">24/7 Support</h3>
+                    <p class="text-gray-600">Round-the-clock technical support and emergency services.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">Our Services</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Comprehensive security and electrical solutions tailored to your needs</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="service-card bg-gray-50 rounded-xl p-8 shadow-md hover:shadow-xl transition duration-300" data-aos="fade-up">
+                    <div class="service-icon bg-primary text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 transition duration-500">
+                        <i class="fas fa-camera text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-center mb-4">CCTV Installation</h3>
+                    <p class="text-gray-600 text-center">Professional installation of high-definition CCTV cameras with remote monitoring capabilities for complete property surveillance.</p>
+                </div>
+                
+                <div class="service-card bg-gray-50 rounded-xl p-8 shadow-md hover:shadow-xl transition duration-300" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-icon bg-primary text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 transition duration-500">
+                        <i class="fas fa-lock text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-center mb-4">Access Control</h3>
+                    <p class="text-gray-600 text-center">Advanced access control systems including biometric scanners, key cards, and intercom systems for secure entry management.</p>
+                </div>
+                
+                <div class="service-card bg-gray-50 rounded-xl p-8 shadow-md hover:shadow-xl transition duration-300" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-icon bg-primary text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 transition duration-500">
+                        <i class="fas fa-home text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-center mb-4">Home Automation</h3>
+                    <p class="text-gray-600 text-center">Smart home solutions that integrate lighting, security, climate control and entertainment systems for modern living.</p>
+                </div>
+                
+                <div class="service-card bg-gray-50 rounded-xl p-8 shadow-md hover:shadow-xl transition duration-300" data-aos="fade-up">
+                    <div class="service-icon bg-primary text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 transition duration-500">
+                        <i class="fas fa-bell text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-center mb-4">Alarm Systems</h3>
+                    <p class="text-gray-600 text-center">Comprehensive intruder alarm systems with motion sensors, door/window contacts and 24/7 monitoring options.</p>
+                </div>
+                
+                <div class="service-card bg-gray-50 rounded-xl p-8 shadow-md hover:shadow-xl transition duration-300" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-icon bg-primary text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 transition duration-500">
+                        <i class="fas fa-plug text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-center mb-4">Electrical Services</h3>
+                    <p class="text-gray-600 text-center">Complete electrical solutions including wiring, panel upgrades, lighting installations and energy-efficient systems.</p>
+                </div>
+                
+                <div class="service-card bg-gray-50 rounded-xl p-8 shadow-md hover:shadow-xl transition duration-300" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-icon bg-primary text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 transition duration-500">
+                        <i class="fas fa-search text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-center mb-4">Security Audits</h3>
+                    <p class="text-gray-600 text-center">Thorough security assessments to identify vulnerabilities and recommend customized protection strategies for your property.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="lg:w-1/2 mb-12 lg:mb-0 lg:pr-12" data-aos="fade-right">
+                    <h2 class="text-3xl md:text-4xl font-bold text-primary mb-6">Why Choose Laxmi Security?</h2>
+                    <p class="text-gray-600 mb-8">We stand out from the competition with our commitment to excellence and customer satisfaction.</p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="bg-secondary text-white rounded-full p-2 mr-4">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-lg mb-1">Certified Professionals</h4>
+                                <p class="text-gray-600">Our team consists of licensed and experienced technicians with extensive industry training.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-secondary text-white rounded-full p-2 mr-4">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-lg mb-1">Quality Products</h4>
+                                <p class="text-gray-600">We use only premium-grade equipment from trusted manufacturers with solid warranties.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-secondary text-white rounded-full p-2 mr-4">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-lg mb-1">Custom Solutions</h4>
+                                <p class="text-gray-600">Every installation is tailored to your specific needs and property requirements.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-secondary text-white rounded-full p-2 mr-4">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-lg mb-1">After-Sales Support</h4>
+                                <p class="text-gray-600">Comprehensive maintenance plans and responsive customer service for peace of mind.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2" data-aos="fade-left">
+                    <div class="bg-white p-6 rounded-xl shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1558002038-1055907df827?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Security System Installation" class="w-full h-auto rounded-lg mb-6">
+                        <h3 class="text-2xl font-semibold mb-4 text-primary">Ready to Secure Your Property?</h3>
+                        <p class="text-gray-600 mb-6">Contact us today for a free consultation and quote. Our experts will assess your needs and recommend the perfect security solution.</p>
+                        <a href="#contact" class="inline-block bg-secondary text-white font-semibold py-3 px-8 rounded-full hover:bg-orange-700 transition duration-300">
+                            Get Started Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">Our Products</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">High-quality security and electrical products from leading brands</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="overflow-hidden rounded-xl shadow-md hover:shadow-xl transition duration-300" data-aos="fade-up">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Surveillance Systems" class="w-full h-full object-cover transition duration-500 hover:scale-110">
+                    </div>
+                    <div class="p-6 bg-gray-50">
+                        <h3 class="text-xl font-semibold mb-3">Surveillance Systems</h3>
+                        <p class="text-gray-600 mb-4">Complete CCTV solutions including HD cameras, DVR/NVR systems, night vision, and motion detection technology.</p>
+                        <a href="#contact" class="text-secondary font-semibold hover:underline inline-flex items-center">
+                            Learn More <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="overflow-hidden rounded-xl shadow-md hover:shadow-xl transition duration-300" data-aos="fade-up" data-aos-delay="100">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1597852074816-d933c7d2b988?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Alarm Systems" class="w-full h-full object-cover transition duration-500 hover:scale-110">
+                    </div>
+                    <div class="p-6 bg-gray-50">
+                        <h3 class="text-xl font-semibold mb-3">Alarm Systems</h3>
+                        <p class="text-gray-600 mb-4">Intrusion detection systems with door/window sensors, motion detectors, and 24/7 monitoring options.</p>
+                        <a href="#contact" class="text-secondary font-semibold hover:underline inline-flex items-center">
+                            Learn More <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="overflow-hidden rounded-xl shadow-md hover:shadow-xl transition duration-300" data-aos="fade-up" data-aos-delay="200">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Access Control" class="w-full h-full object-cover transition duration-500 hover:scale-110">
+                    </div>
+                    <div class="p-6 bg-gray-50">
+                        <h3 class="text-xl font-semibold mb-3">Access Control</h3>
+                        <p class="text-gray-600 mb-4">Keyless entry systems, biometric scanners, and card-based access solutions for enhanced security.</p>
+                        <a href="#contact" class="text-secondary font-semibold hover:underline inline-flex items-center">
+                            Learn More <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="overflow-hidden rounded-xl shadow-md hover:shadow-xl transition duration-300" data-aos="fade-up">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Home Automation" class="w-full h-full object-cover transition duration-500 hover:scale-110">
+                    </div>
+                    <div class="p-6 bg-gray-50">
+                        <h3 class="text-xl font-semibold mb-3">Home Automation</h3>
+                        <p class="text-gray-600 mb-4">Smart home solutions include lighting control, thermostat automation, voice control integration, and more.</p>
+                        <a href="#contact" class="text-secondary font-semibold hover:underline inline-flex items-center">
+                            Learn More <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="overflow-hidden rounded-xl shadow-md hover:shadow-xl transition duration-300" data-aos="fade-up" data-aos-delay="100">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1486401899868-0e435ed85128?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Networking Solutions" class="w-full h-full object-cover transition duration-500 hover:scale-110">
+                    </div>
+                    <div class="p-6 bg-gray-50">
+                        <h3 class="text-xl font-semibold mb-3">Networking Solutions</h3>
+                        <p class="text-gray-600 mb-4">Enterprise-grade networking equipment including routers, switches, access points, and structured cabling.</p>
+                        <a href="#contact" class="text-secondary font-semibold hover:underline inline-flex items-center">
+                            Learn More <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="overflow-hidden rounded-xl shadow-md hover:shadow-xl transition duration-300" data-aos="fade-up" data-aos-delay="200">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1484807352052-23338990c6c6?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Electrical Systems" class="w-full h-full object-cover transition duration-500 hover:scale-110">
+                    </div>
+                    <div class="p-6 bg-gray-50">
+                        <h3 class="text-xl font-semibold mb-3">Electrical Systems</h3>
+                        <p class="text-gray-600 mb-4">Complete electrical solutions including wiring, panels, switches, and energy-efficient installations.</p>
+                        <a href="#contact" class="text-secondary font-semibold hover:underline inline-flex items-center">
+                            Learn More <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 bg-primary text-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">What Our Clients Say</h2>
+                <p class="text-xl opacity-90 max-w-2xl mx-auto">Trusted by homeowners and businesses across Visakhapatnam</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="testimonial-card bg-white bg-opacity-10 p-8 rounded-xl backdrop-blur-sm hover:bg-opacity-20 transition duration-300" data-aos="fade-up">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Rahul Sharma" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">Rahul Sharma</h4>
+                            <p class="text-sm opacity-80">Homeowner, MVP Colony</p>
+                        </div>
+                    </div>
+                    <p class="italic mb-6">"Laxmi Security installed CCTV cameras for my home and the service was exceptional. The technicians were professional and explained everything clearly. The system works perfectly and gives me peace of mind."</p>
+                    <div class="flex text-yellow-300">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card bg-white bg-opacity-10 p-8 rounded-xl backdrop-blur-sm hover:bg-opacity-20 transition duration-300" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Priya Patel" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">Priya Patel</h4>
+                            <p class="text-sm opacity-80">Business Owner, Dwarakanagar</p>
+                        </div>
+                    </div>
+                    <p class="italic mb-6">"We've been using Laxmi Security for our retail store's surveillance needs for 3 years now. Their maintenance service is prompt and reliable. Highly recommend their professional approach and quality products."</p>
+                    <div class="flex text-yellow-300">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card bg-white bg-opacity-10 p-8 rounded-xl backdrop-blur-sm hover:bg-opacity-20 transition duration-300" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                            <img src="https://randomuser.me/api/portraits/men/67.jpg" alt="Arjun Reddy" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">Arjun Reddy</h4>
+                            <p class="text-sm opacity-80">Office Manager, Seethammadhara</p>
+                        </div>
+                    </div>
+                    <p class="italic mb-6">"The access control system installed by Laxmi Security has significantly improved our office security. The team was knowledgeable and completed the work with minimal disruption to our operations."</p>
+                    <div class="flex text-yellow-300">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="lg:w-1/2 mb-12 lg:mb-0 lg:pr-12" data-aos="fade-right">
+                    <h2 class="text-3xl md:text-4xl font-bold text-primary mb-6">About Laxmi Security Systems & Electricals</h2>
+                    <p class="text-gray-600 mb-6">Established in Visakhapatnam, Laxmi Security Systems & Electricals has provided top-quality security and automation solutions to residential and commercial clients since 2018.</p>
+                    <p class="text-gray-600 mb-6">Our team of certified professionals is committed to delivering reliable, cutting-edge systems backed by exceptional customer service. We understand that every property has unique security needs, which is why we offer customized solutions tailored to your specific requirements.</p>
+                    <p class="text-gray-600 mb-8">From small home installations to large commercial deployments, we bring the same level of dedication and expertise to every project, ensuring your complete satisfaction.</p>
+                    
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <div class="text-3xl text-secondary font-bold mb-2">5+</div>
+                            <div class="text-gray-600">Years Experience</div>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <div class="text-3xl text-secondary font-bold mb-2">500+</div>
+                            <div class="text-gray-600">Projects Completed</div>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <div class="text-3xl text-secondary font-bold mb-2">24/7</div>
+                            <div class="text-gray-600">Support Available</div>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <div class="text-3xl text-secondary font-bold mb-2">100%</div>
+                            <div class="text-gray-600">Satisfaction Guarantee</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2" data-aos="fade-left">
+                    <div class="relative rounded-xl overflow-hidden shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Laxmi Security Team" class="w-full h-auto">
+                        <div class="absolute inset-0 bg-primary opacity-20"></div>
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-6">
+                            <h3 class="text-white text-xl font-semibold">Our Certified Technicians</h3>
+                            <p class="text-white text-opacity-80">Highly trained professionals with extensive industry experience</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8 bg-white p-6 rounded-xl shadow-md">
+                        <h3 class="text-xl font-semibold mb-4 text-primary">Our Mission</h3>
+                        <p class="text-gray-600 mb-4">To provide innovative security and electrical solutions that protect what matters most to our clients, while delivering exceptional service and value.</p>
+                        <h3 class="text-xl font-semibold mb-4 text-primary">Our Vision</h3>
+                        <p class="text-gray-600">To be Visakhapatnam's most trusted security partner, recognized for our technical expertise, reliability, and customer-focused approach.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-secondary text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6" data-aos="fade-up">Ready to Secure Your Property?</h2>
+            <p class="text-xl max-w-2xl mx-auto mb-8" data-aos="fade-up" data-aos-delay="100">Contact us today for a free consultation and quote. Our experts will assess your needs and recommend the perfect security solution.</p>
+            <div data-aos="fade-up" data-aos-delay="200">
+                <a href="#contact" class="inline-block bg-white text-secondary font-semibold py-3 px-8 rounded-full hover:bg-gray-100 transition duration-300 mr-4 mb-4">
+                    Get a Free Quote
+                </a>
+                <a href="tel:+919885651904" class="inline-block border-2 border-white text-white font-semibold py-3 px-8 rounded-full hover:bg-white hover:text-secondary transition duration-300">
+                    <i class="fas fa-phone-alt mr-2"></i> Call Now
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">Contact Us</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Get in touch for a free consultation or quote</p>
+            </div>
+            
+            <div class="flex flex-col lg:flex-row gap-12">
+                <div class="lg:w-1/2" data-aos="fade-right">
+                    <div class="bg-gray-50 p-8 rounded-xl shadow-md">
+                        <h                        <h3 class="text-2xl font-semibold text-primary mb-6">Contact Information</h3>
                         
                         <div class="space-y-6">
                             <div class="flex items-start">
@@ -187,7 +718,7 @@
             
             <div class="border-t border-gray-700 pt-8 text-center text-gray-400">
                 <p>&copy; 2023 Laxmi Security Systems & Electricals. All Rights Reserved.</p>
-                <p class="mt-2 text-sm">Designed with ❤️ for security needs</p>
+                <p class="mt-2 text-sm">Designed with ❤️ for Visakhapatnam's security needs</p>
             </div>
         </div>
     </footer>
